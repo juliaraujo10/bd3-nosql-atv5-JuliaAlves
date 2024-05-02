@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Banco de Dados Firestore</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicione o SDK do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"></script>
+    <!-- Adicione o seu script personalizado -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Exemplo de Banco de Dados Firestore</h1>
+
+        <!-- Formulário para adicionar aluno -->
+        <div class="form-section">
+            <h2>Adicionar Aluno</h2>
+            <form id="addStudentForm">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="text" name="CPF" placeholder="CPF" required>
+                <input type="text" name="RG" placeholder="RG" required>
+                <input type="text" name="telefone_aluno" placeholder="Telefone do Aluno" required>
+                <input type="text" name="telefone_responsavel" placeholder="Telefone do Responsável" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="datetime-local" name="data_nascimento" required>
+                <button type="submit">Adicionar Aluno</button>
+            </form>
+        </div>
+
+        <!-- Lista de alunos -->
+        <div class="list-section">
+            <h2>Lista de Alunos</h2>
+            <ul id="studentList"></ul>
+        </div>
+
+        <!-- Formulário para excluir aluno -->
+        <div class="form-section">
+            <h2>Excluir Aluno</h2>
+            <form id="deleteStudentForm">
+                <input type="text" name="studentId" placeholder="Digite o ID do Aluno" required>
+                <button type="submit">Excluir Aluno</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
